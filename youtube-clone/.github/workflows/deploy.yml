@@ -16,16 +16,19 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      - name: Use App Directory
+        run: cd youtube-clone
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install Dependencies
-        run: npm install
+        run: cd youtube-clone && npm install
 
       - name: Run Linter
-        run: npm run lint
+        run: cd youtube-clone && npm run lint
 
       - name: Run Build
-        run: npm run build
+        run: cd youtube-clone && npm run build
