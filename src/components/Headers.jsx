@@ -1,7 +1,10 @@
-export default function Headers() {
-    return (
-        <header>
-            <h1>Youtube Clone</h1>
-        </header>
-    );
+import SearchBar from './SearchBar';
+function Headers() {
+  return (
+    <header className="py-4 bg-white shadow">
+      <SearchBar />
+    </header>
+  );
 }
+
+export default Headers;
