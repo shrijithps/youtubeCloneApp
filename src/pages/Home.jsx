@@ -1,10 +1,7 @@
-import Headers from '../components/Headers';
-function Home() {
-  return (
-   <div className="min-h-screen bg-gray-100">
-      <Headers />
-   </div>
-  );
+export default function Headers() {
+    return (
+        <header>
+            <h1>Youtube Clone</h1>
+        </header>
+    );
 }
-
-export default Home;

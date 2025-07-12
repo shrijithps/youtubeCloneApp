@@ -1,8 +1,7 @@
-function SideBar() {
+export default function Headers() {
     return (
-        <div>
+        <header>
             <h1>Youtube Clone</h1>
-        </div>
+        </header>
     );
 }
-export default SideBar
