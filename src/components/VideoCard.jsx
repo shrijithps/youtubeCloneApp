@@ -1,3 +1,3 @@
 export default function VideoCard() {
-    return <div>Headers</div>;
+    return <div>VideoCard</div>;
 }
