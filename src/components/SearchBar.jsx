@@ -40,7 +40,7 @@ const SearchBar = ({ onSearch }) => {
             type="submit" // Use type="submit" for form submission
             className="px-6 py-2 bg-gray-100 border border-l-0 border-gray-300 rounded-r-full hover:bg-gray-200"
           >
-            <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-gray-600" />
+            <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-gray-600 cursor-pointer" />
           </button>
         </div>
       </form>
