@@ -20,7 +20,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto"> {/* Centered with max width */}
+    <div className="w-full max-w-2xl sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-2"> {/* Centered with max width */}
       <form onSubmit={handleSearch}> {/* Wrap input and button in form */}
         <div className="flex items-center">
           <div className="flex-1 relative">
@@ -29,11 +29,11 @@ const SearchBar = ({ onSearch }) => {
               value={searchQuery}
               onChange={handleInputChange}
               placeholder="Search"
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-l-full focus:border-blue-500 focus:outline-none"
+              className="w-full pl-10 pr-4 py-2 sm:py-2.5 text-sm sm:text-base border border-gray-300 rounded-l-full focus:border-blue-500 focus:outline-none"
             />
             <FontAwesomeIcon
               icon={faSearch}
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600"
+              className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm sm:text-base"
             />
           </div>
           <button
