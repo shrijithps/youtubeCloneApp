@@ -1,10 +1,12 @@
-import SearchBar from './SearchBar';
-function Headers() {
+import React from 'react';
+import Navbar from './Navbar';
+
+const Headers = ({ onSearch }) => {
   return (
-    <header className="py-4 bg-white shadow">
-      <SearchBar />
+    <header>
+      <Navbar onSearch={onSearch} />
     </header>
   );
-}
+};
 
 export default Headers;
