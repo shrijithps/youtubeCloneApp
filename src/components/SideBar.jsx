@@ -35,8 +35,9 @@ function SideBar() {
                         <span className="text-xs">Shorts</span>
                     </li>
 
-                   <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
-                        <img src={subscription} alt="Youtube Subscriptions" className="w-8 h-8 pl-2 cursor-pointer"/>
+                   <li className={`items-center ${show? 'flex flex-row gap-2':''}`}>
+                        <img src={subscription} alt="Youtube Subscriptions"
+                             className="w-18 h-8 pl-2 cursor-pointer"/>
                         <span className="text-xs">Subscriptions</span>
                     </li>
 
