@@ -18,11 +18,12 @@ function SideBar() {
             />
 
             <div
-                className={`bg-white-100 border border-gray-200 transition-all duration-300 ease-in-out ${show?'w-60 borderborder-r-black':'w-16'}`}
+                className={`bg-white border border-gray-200 transition-all duration-300 ease-in-out h-screen 
+                ${show? 'w-50 border-r-4':'w-22 '}`}
             >
 
             {(
-               <ul className="flex flex-col fixed top-20 left-4 pl-2 space-y-4">
+               <ul className="flex flex-col fixed top-20 space-y-4 items-center">
 
                     <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
                         <img src={youtubeHome} alt="Youtube Home" className="w-8 h-8 pl-2 pt-2 cursor-pointer"/>
