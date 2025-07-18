@@ -6,7 +6,7 @@ function Home() {
   return (
    <div className="min-h-screen bg-gray-100">
       <Headers />
-       <HomePage />
+       {/*<HomePage />*/}
        <SideBar/>
    </div>
   );
