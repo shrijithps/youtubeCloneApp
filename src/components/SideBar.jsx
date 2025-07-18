@@ -27,7 +27,7 @@ function SideBar() {
 
                     <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
                         <img src={youtubeHome} alt="Youtube Home" className="w-8 h-8 pl-2 pt-2 cursor-pointer"/>
-                        <span className="text-xs text-center w-fit">Home</span>
+                        <span className="text-xs">Home</span>
                     </li>
 
                     <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
@@ -37,7 +37,7 @@ function SideBar() {
 
                    <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
                         <img src={subscription} alt="Youtube Subscriptions" className="w-8 h-8 pl-2 cursor-pointer"/>
-                        <span className={`text-xs ${show? 'flex text-xs items-center': ''}`}>Subscriptions</span>
+                        <span className="text-xs">Subscriptions</span>
                     </li>
 
                    <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
