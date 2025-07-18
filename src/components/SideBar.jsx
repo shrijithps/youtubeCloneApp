@@ -19,31 +19,31 @@ function SideBar() {
 
             <div
                 className={`bg-white border border-gray-200 transition-all duration-300 ease-in-out h-screen 
-                ${show? 'w-50 border-r-4':'w-22 '}`}
+                ${show? 'w-50 border-r-4':'w-22'}`}
             >
 
             {(
-               <ul className="flex flex-col fixed top-20 space-y-4 items-center">
+               <ul className={`flex flex-col top-20 space-y-4 ${show ? 'items-start pl-4' : 'items-center'}`}>
 
-                    <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
-                        <img src={youtubeHome} alt="Youtube Home" className="w-8 h-8 pl-2 pt-2 cursor-pointer"/>
-                        <span className="text-xs">Home</span>
+                    <li className={`flex pt-4 ${show? 'flex-row items-center gap-2':'flex-col items-center'}`}>
+                        <img src={youtubeHome} alt="Youtube Home" className="w-6 h-6 cursor-pointer"/>
+                        <span className={`text-xs ${!show && 'mt-1'}`}>Home</span>
                     </li>
 
-                    <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
-                        <img src={youtubeShorts} alt="Youtube Shorts" className="w-8 h-8 pl-2 cursor-pointer"/>
-                        <span className="text-xs">Shorts</span>
+                    <li className={`flex ${show? 'flex-row items-center gap-2':'flex-col items-center'}`}>
+                        <img src={youtubeShorts} alt="Youtube Shorts" className="w-6 h-6 cursor-pointer"/>
+                        <span className={`text-xs ${!show && 'mt-1'}`}>Shorts</span>
                     </li>
 
-                   <li className={`items-center ${show? 'flex flex-row gap-2':''}`}>
+                   <li className={`flex ${show? 'flex-row items-center gap-2':'flex-col items-center'}`}>
                         <img src={subscription} alt="Youtube Subscriptions"
-                             className="w-18 h-8 pl-2 cursor-pointer"/>
-                        <span className="text-xs">Subscriptions</span>
+                             className="w-6 h-6 cursor-pointer"/>
+                        <span className={`text-xs ${!show && 'mt-1'}`}>Subscriptions</span>
                     </li>
 
-                   <li className={` ${show? 'flex flex-row items-center gap-2':''}`}>
-                        <img src={youtubeMusic} alt="Youtube Music" className="w-8 h-8 pl-2 cursor-pointer"/>
-                        <span className="text-xs">Music</span>
+                   <li className={`flex ${show? 'flex-row items-center gap-2':'flex-col items-center'}`}>
+                        <img src={youtubeMusic} alt="Youtube Music" className="w-6 h-6 cursor-pointer"/>
+                        <span className={`text-xs ${!show && 'mt-1'}`}>Music</span>
                     </li>
 
                </ul>
