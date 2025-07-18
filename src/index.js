@@ -1,0 +1,7 @@
+import subscription from './assets/subscription.svg';
+import youtubeShorts from './assets/youtubeShorts.svg';
+import youtubeMusic from './assets/youtubeMusic.svg'
+import youtubeHome from './assets/youtubeHome.svg'
+
+
+export {subscription, youtubeShorts, youtubeMusic, youtubeHome}
