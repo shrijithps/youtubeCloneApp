@@ -88,6 +88,8 @@ const Navbar = ({ onSearch }) => {
                 onVoiceSearch={() => alert('Voice search not implemented')}
                 data-tooltip-id="voice-search-tooltip"
                 data-tooltip-content="Voice Search"
+                className="ml-4"
+
               />
             </div>
           )}
