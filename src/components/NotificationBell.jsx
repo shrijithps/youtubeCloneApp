@@ -2,10 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 
-const NotificationBell = ({ count = 0, onClick }) => {
+const NotificationBell = ({ count = 0, onClick, ...rest }) => {
   return (
     <button
       onClick={onClick}
+      {...rest}
       className="relative p-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
       aria-label={`Notifications (${count} new)`}
     >
