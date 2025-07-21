@@ -15,6 +15,18 @@ const Navbar = ({ onSearch }) => {
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const notificationCount = 3;
 
+  const tooltips = [
+    { id: 'menu-tooltip', place: 'bottom' },
+    { id: 'logo-tooltip', place: 'bottom' },
+    { id: 'back-tooltip', place: 'bottom' },
+    { id: 'search-tooltip', place: 'bottom' },
+    { id: 'search-toggle-tooltip', place: 'bottom' },
+    { id: 'voice-search-tooltip', place: 'bottom' },
+    { id: 'create-tooltip', place: 'bottom' },
+    { id: 'notification-tooltip', place: 'bottom' },
+    { id: 'profile-tooltip', place: 'bottom' },
+  ];
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -51,7 +63,7 @@ const Navbar = ({ onSearch }) => {
             <div className="w-full flex items-center">
               <button
                 onClick={toggleSearch}
-                className="flex items-center j  ustify-center w-10 h-10 text-gray-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                className="flex items-center justify-center w-10 h-10 text-gray-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
                 aria-label="Back"
                 data-tooltip-id="back-tooltip"
                 data-tooltip-content="Back"
@@ -85,11 +97,10 @@ const Navbar = ({ onSearch }) => {
                 data-tooltip-content="Search"
               />
               <VoiceSearchButton
-                onVoiceSearch={() => alert('Voice search not implemented')}
+                onVoiceSearch={() => alert('Voice search is not implemented')}
                 data-tooltip-id="voice-search-tooltip"
                 data-tooltip-content="Voice Search"
                 className="ml-4"
-
               />
             </div>
           )}
@@ -119,16 +130,10 @@ const Navbar = ({ onSearch }) => {
         )}
       </div>
 
-      {/* Add ReactTooltip components */}
-      <ReactTooltip id="menu-tooltip" place="bottom" />
-      <ReactTooltip id="logo-tooltip" place="bottom" />
-      <ReactTooltip id="back-tooltip" place="bottom" />
-      <ReactTooltip id="search-tooltip" place="bottom" />
-      <ReactTooltip id="search-toggle-tooltip" place="bottom" />
-      <ReactTooltip id="voice-search-tooltip" place="bottom" />
-      <ReactTooltip id="create-tooltip" place="bottom" />
-      <ReactTooltip id="notification-tooltip" place="bottom" />
-      <ReactTooltip id="profile-tooltip" place="bottom" />
+      {/* Add ReactTooltip components via mapping */}
+      {tooltips.map(({ id, place }) => (
+        <ReactTooltip key={id} id={id} place={place} />
+      ))}
     </nav>
   );
 };
