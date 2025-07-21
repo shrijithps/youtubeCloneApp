@@ -1,6 +1,5 @@
 import Headers from '../components/Headers';
 import HomePage from '../components/HomePage';
-import VideoCard from "../components/VideoCard.jsx";
 
 function Home() {
   return (
