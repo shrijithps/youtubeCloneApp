@@ -2,7 +2,7 @@ import VideoCard from "./VideoCard";
 
 export default function HomePage() {
     return (
-        <div>
+        <div className="flex items-center justify-center">
             <VideoCard
                 video={{
                     id: 'abc123',

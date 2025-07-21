@@ -9,6 +9,7 @@ import VoiceSearchButton from './VoiceSearchButton';
 import NotificationBell from './NotificationBell';
 import ProfileAvatar from './ProfileAvatar';
 import CreateButton from './CreateButton';
+import SideBar from "./SideBar.jsx";
 
 const Navbar = ({ onSearch }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -36,6 +37,13 @@ const Navbar = ({ onSearch }) => {
   };
 
   return (
+      <>
+        <div className="pt-16">
+        <SideBar
+            isOpen={isSidebarOpen}
+        />
+      </div>
+
     <nav className="fixed top-0 left-0 w-full bg-white text-black shadow-md z-10">
       <div className="flex items-center justify-between px-2 py-2 max-w-7xl mx-auto sm:px-4 md:px-6 lg:px-8">
         {/* Left Section: Menu Button and Logo */}
@@ -135,7 +143,9 @@ const Navbar = ({ onSearch }) => {
         <ReactTooltip key={id} id={id} place={place} />
       ))}
     </nav>
+     </>
   );
+
 };
 
 export default Navbar;
