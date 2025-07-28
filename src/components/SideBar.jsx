@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {youtubeShorts, subscription, youtubeMusic, youtubeHome} from '../index';
 
 function SideBar({isOpen}) {
