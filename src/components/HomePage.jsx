@@ -2,7 +2,7 @@ import VideoCard from "./VideoCard";
 
 export default function HomePage() {
     return (
-        <div>
+        <div className="">
             <VideoCard
                 video={{
                     id: 'abc123',
