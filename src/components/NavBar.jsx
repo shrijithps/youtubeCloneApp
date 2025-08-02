@@ -7,17 +7,20 @@ import VoiceSearchButton from './VoiceSearchButton';
 import NotificationBell from './NotificationBell';
 import ProfileAvatar from './ProfileAvatar';
 import CreateButton from './CreateButton';
+import {youtubeLogo} from "../index.js";
+
+const defaultTooltipPlacement = 'bottom';
 
 const tooltips = [
-  { id: 'menu-tooltip', place: 'bottom' },
-  { id: 'logo-tooltip', place: 'bottom' },
-  { id: 'back-tooltip', place: 'bottom' },
-  { id: 'search-tooltip', place: 'bottom' },
-  { id: 'search-toggle-tooltip', place: 'bottom' },
-  { id: 'voice-search-tooltip', place: 'bottom' },
-  { id: 'create-tooltip', place: 'bottom' },
-  { id: 'notification-tooltip', place: 'bottom' },
-  { id: 'profile-tooltip', place: 'bottom' },
+  { id: 'menu-tooltip', place:  defaultTooltipPlacement},
+  { id: 'logo-tooltip', place: defaultTooltipPlacement},
+  { id: 'back-tooltip', place: defaultTooltipPlacement},
+  { id: 'search-tooltip', place: defaultTooltipPlacement},
+  { id: 'search-toggle-tooltip', place: defaultTooltipPlacement },
+  { id: 'voice-search-tooltip', place: defaultTooltipPlacement },
+  { id: 'create-tooltip', place: defaultTooltipPlacement },
+  { id: 'notification-tooltip', place: defaultTooltipPlacement },
+  { id: 'profile-tooltip', place: defaultTooltipPlacement },
 ];
 
 const Navbar = ({ onSearch, toggleSidebar }) => {
@@ -48,9 +51,9 @@ const Navbar = ({ onSearch, toggleSidebar }) => {
           data-tooltip-content="Home"
         >
           <img
-            src="./src/assets/youtube-logo.png"
+            src={youtubeLogo}
             alt="YouTube logo"
-            className="h-8"
+            className="h-12"
             draggable={false}
             loading="eager"
           />

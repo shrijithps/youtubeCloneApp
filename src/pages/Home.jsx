@@ -9,11 +9,19 @@ function Home() {
   const toggleSidebar = () => setIsSidebarOpen(open => !open);
 
   return (
-    <div className="flex bg-gray-100 min-h-screen">
-      <SideBar isSidebarOpen={isSidebarOpen} />
-      <div className="flex-1 flex flex-col">
-        <Headers toggleSidebar={toggleSidebar} />
-        <HomePage />
+    <div className="min-h-screen bg-gray-100">
+      <Headers
+          toggleSidebar={toggleSidebar}
+      />
+      <div className="pt-14">
+        <SideBar isSidebarOpen={isSidebarOpen} />
+        <main 
+          className={`flex-1 transition-all duration-300 ease-in-out ${
+            isSidebarOpen ? 'ml-56' : 'ml-16'
+          } p-4`}
+        >
+          <HomePage />
+        </main>
       </div>
     </div>
   );
